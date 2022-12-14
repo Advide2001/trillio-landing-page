@@ -1,20 +1,20 @@
 {
-  "name": "trillio-landing-page",
-  "version": "1.0.0",
-  "description": "Landing page for trillo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "SCSS",
-    "HTML",
-    "CSS",
-    "Landing-page"
-  ],
-  "author": "Adarsh V Desai",
-  "license": "MIT",
-  "dependencies": {
-    "node-sass": "^8.0.0"
-  }
+	"name": "trillio-landing-page",
+	"version": "1.0.0",
+	"description": "Landing page for trillo",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.scss css/main.css -w"
+	},
+	"keywords": [
+		"SCSS",
+		"HTML",
+		"CSS",
+		"Landing-page"
+	],
+	"author": "Adarsh V Desai",
+	"license": "MIT",
+	"dependencies": {
+		"node-sass": "^8.0.0"
+	}
 }
