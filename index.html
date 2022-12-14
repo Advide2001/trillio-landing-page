@@ -8,6 +8,13 @@
 			href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -15,7 +22,44 @@
 	</head>
 	<body>
 		<div class="container">
-			<header class="header">Header Part</header>
+			<header class="header">
+				<img
+					src="img/logo.png"
+					alt="trillo logo"
+					class="header__logo"
+				/>
+				<form action="#" class="search">
+					<input
+						type="text"
+						class="search__input"
+						placeholder="Search hotels"
+					/>
+					<button class="search__button">
+						<span class="search__icon">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</span>
+					</button>
+				</form>
+
+				<nav class="user-nav">
+					<div class="user-nav__icon-box">
+						<i class="fa-solid fa-bookmark"></i>
+						<span class="user-nav__notification">7</span>
+					</div>
+					<div class="user-nav__icon-box">
+						<i class="fa-solid fa-comments"></i>
+						<span class="user-nav__notification">13</span>
+					</div>
+					<div class="user-nav__user">
+						<img
+							src="img/user.jpg"
+							alt="User photo"
+							class="user-nav__user-photo"
+						/>
+						<span class="user-nav__user-name">Harvey</span>
+					</div>
+				</nav>
+			</header>
 			<div class="content">
 				<nav class="sidebar">Navigation</nav>
 				<main class="hotel-view">Main Part</main>
