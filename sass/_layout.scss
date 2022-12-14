@@ -1,0 +1,28 @@
+.container {
+	max-width: 75rem;
+	min-height: 20rem; // Prevents content from being too short
+	margin: 5rem auto;
+	background-color: var(--clr-neutral-300);
+	box-shadow: var(--bs-dark);
+}
+
+.header {
+	height: 4.375rem;
+	background-color: var(--clr-neutral-100);
+	border-bottom: 1px solid var(--clr-neutral-300);
+}
+
+// parent element of both sidebar and hotel-veiw
+.content {
+	display: flex;
+}
+
+.sidebar {
+	background-color: var(--clr-neutral-800);
+	flex: 0 0 18%;
+}
+
+.hotel-view {
+	background-color: var(--clr-neutral-100);
+	flex: 1;
+}

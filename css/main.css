@@ -1,0 +1,120 @@
+:root {
+  --clr-primary-100: #ff3366;
+  --clr-primary-900: #ba265d;
+  --clr-primary-500: #eb2f64;
+  --clr-neutral-100: #fff;
+  --clr-neutral-200: #faf9f9;
+  --clr-neutral-300: #f4f2f2;
+  --clr-neutral-400: #f0eeee;
+  --clr-neutral-500: #ccc;
+  --clr-neutral-600: #999;
+  --clr-neutral-700: #777;
+  --clr-neutral-800: #333;
+  --clr-neutral-900: #000000;
+  --fw-light: 300;
+  --fw-normal: 400;
+  --fw-bold: 600;
+  --bs-dark: 0 1.25rem 3.75rem rgba(var(--clr-neutral-900), 0.3); }
+
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/*
+    2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*
+    3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%; }
+
+/*
+    Typographic tweaks!
+        4. Add accessible line-height
+        5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--fw-normal);
+  min-height: 100%;
+  overflow: hidden; }
+
+/*
+    6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%; }
+
+/*
+    7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/*
+    8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word; }
+
+/*
+    9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate; }
+
+body {
+  background-image: linear-gradient(to right bottom, var(--clr-primary-100) 0%, var(--clr-primary-900) 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--clr-neutral-700); }
+
+.container {
+  max-width: 75rem;
+  min-height: 20rem;
+  margin: 5rem auto;
+  background-color: var(--clr-neutral-300);
+  box-shadow: var(--bs-dark); }
+
+.header {
+  height: 4.375rem;
+  background-color: var(--clr-neutral-100);
+  border-bottom: 1px solid var(--clr-neutral-300); }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--clr-neutral-800);
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: var(--clr-neutral-100);
+  flex: 1; }
