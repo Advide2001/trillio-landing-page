@@ -13,6 +13,7 @@
 */
 * {
 	margin: 0;
+	padding: 0;
 }
 
 /*
@@ -75,3 +76,17 @@ h6 {
 #__next {
 	isolation: isolate;
 }
+
+// CSS Variables
+// Colors (Primary)
+$clr-primary-100: #ff3366;
+$clr-primary-900: #ba265d;
+$clr-primary-500: #eb2f64;
+// Colors (Secondary)
+$clr-neutral-200: #faf9f9;
+$clr-neutral-300: #f4f2f2;
+$clr-neutral-400: #f0eeee;
+$clr-neutral-500: #ccc;
+$clr-neutral-600: #999;
+$clr-neutral-700: #777;
+$clr-neutral-800: #333;
