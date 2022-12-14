@@ -1,3 +1,26 @@
+:root {
+	// Colors
+	--clr-primary-100: #ff3366;
+	--clr-primary-900: #ba265d;
+	--clr-primary-500: #eb2f64;
+	// Neutral Colors
+	--clr-neutral-100: #fff;
+	--clr-neutral-200: #faf9f9;
+	--clr-neutral-300: #f4f2f2;
+	--clr-neutral-400: #f0eeee;
+	--clr-neutral-500: #ccc;
+	--clr-neutral-600: #999;
+	--clr-neutral-700: #777;
+	--clr-neutral-800: #333;
+	--clr-neutral-900: #000000;
+	// Font Weights
+	--fw-light: 300;
+	--fw-normal: 400;
+	--fw-bold: 600;
+	// Box shadows
+	--bs-dark: 0 1.25rem 3.75rem rgba(var(--clr-neutral-900), 0.3);
+}
+
 // CSS Reset
 /*
     1. Use a more-intuitive box-sizing model.
@@ -32,6 +55,10 @@ body {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	font-family: "Open Sans", sans-serif;
+	font-weight: var(--fw-normal);
+	min-height: 100%;
+	overflow: hidden; // Prevents scrollbars from appearing on the body
 }
 
 /*
@@ -77,20 +104,15 @@ h6 {
 	isolation: isolate;
 }
 
-// CSS Variables
-// Colors (Primary)
-$clr-primary-100: #ff3366;
-$clr-primary-900: #ba265d;
-$clr-primary-500: #eb2f64;
-// Colors (Secondary)
-$clr-neutral-200: #faf9f9;
-$clr-neutral-300: #f4f2f2;
-$clr-neutral-400: #f0eeee;
-$clr-neutral-500: #ccc;
-$clr-neutral-600: #999;
-$clr-neutral-700: #777;
-$clr-neutral-800: #333;
-// Font Weights
-$fw-light: 300;
-$fw-normal: 400;
-$fw-bold: 600;
+// Page Specific CSS
+
+body {
+	background-image: linear-gradient(
+		to right bottom,
+		var(--clr-primary-100) 0%,
+		var(--clr-primary-900) 100%
+	);
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: var(--clr-neutral-700);
+}
