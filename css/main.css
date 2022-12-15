@@ -47,9 +47,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
-  font-weight: var(--fw-normal);
-  min-height: 100%;
-  overflow: hidden; }
+  font-weight: var(--fw-normal); }
 
 /*
     6. Improve media defaults
@@ -91,8 +89,10 @@ h6 {
   isolation: isolate; }
 
 body {
-  background-image: linear-gradient(to right bottom, var(--clr-primary-100) 0%, var(--clr-primary-900) 100%);
+  background-image: linear-gradient(to bottom right, var(--clr-primary-100) 0%, var(--clr-primary-900) 100%);
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--clr-neutral-700); }
 
@@ -115,12 +115,14 @@ body {
 
 .sidebar {
   background-color: var(--clr-neutral-800);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
   background-color: var(--clr-neutral-100);
-  flex: 1;
-  height: 100rem; }
+  flex: 1; }
 
 .header__logo {
   height: 2.25rem;
@@ -197,11 +199,52 @@ body {
     border-radius: 50%;
     margin-right: 0.5rem; }
 
-.side-nav__icon {
-  font-size: 1.125rem; }
+.side-nav {
+  font-size: 1rem;
+  list-style: none;
+  margin-top: 2.25rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 1rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.25rem;
+    height: 100%;
+    background-color: var(--clr-primary-500);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.2s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: var(--clr-primary-100); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--clr-neutral-200);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center; }
+  .side-nav__icon {
+    font-size: 1.125rem;
+    color: currentColor;
+    margin-right: 1rem; }
 
 .legal {
   font-size: 0.75rem;
   color: var(--clr-neutral-500);
   text-align: center;
   padding: 1rem; }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }
