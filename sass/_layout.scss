@@ -10,6 +10,9 @@
 	height: 4.375rem;
 	background-color: var(--clr-neutral-100);
 	border-bottom: 1px solid var(--clr-neutral-300);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 // parent element of both sidebar and hotel-veiw
