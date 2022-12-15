@@ -102,3 +102,24 @@
 		margin-right: 0.5rem;
 	}
 }
+
+// Side Navigation
+.side-nav {
+	&__item {
+	}
+
+	&__link {
+	}
+
+	&__icon {
+		font-size: 1.125rem;
+	}
+}
+
+//Legal Stuff
+.legal {
+	font-size: 0.75rem;
+	color: var(--clr-neutral-500);
+	text-align: center;
+	padding: 1rem;
+}

@@ -1,6 +1,5 @@
 .container {
 	max-width: 75rem;
-	min-height: 20rem; // Prevents content from being too short
 	margin: 5rem auto;
 	background-color: var(--clr-neutral-300);
 	box-shadow: var(--bs-dark);
@@ -28,4 +27,5 @@
 .hotel-view {
 	background-color: var(--clr-neutral-100);
 	flex: 1;
+	height: 100rem; // temporary
 }

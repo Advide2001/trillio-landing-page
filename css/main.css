@@ -98,7 +98,6 @@ body {
 
 .container {
   max-width: 75rem;
-  min-height: 20rem;
   margin: 5rem auto;
   background-color: var(--clr-neutral-300);
   box-shadow: var(--bs-dark); }
@@ -120,7 +119,8 @@ body {
 
 .hotel-view {
   background-color: var(--clr-neutral-100);
-  flex: 1; }
+  flex: 1;
+  height: 100rem; }
 
 .header__logo {
   height: 2.25rem;
@@ -196,3 +196,12 @@ body {
     height: 2.5rem;
     border-radius: 50%;
     margin-right: 0.5rem; }
+
+.side-nav__icon {
+  font-size: 1.125rem; }
+
+.legal {
+  font-size: 0.75rem;
+  color: var(--clr-neutral-500);
+  text-align: center;
+  padding: 1rem; }
