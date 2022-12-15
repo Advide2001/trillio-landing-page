@@ -149,12 +149,8 @@
 		padding: 1rem 2rem;
 		position: relative;
 		z-index: 10;
-
 		display: flex;
 		align-items: center;
-
-		&:hover {
-		}
 	}
 
 	&__icon {
@@ -180,5 +176,96 @@
 	&__photo {
 		width: 100%;
 		display: block;
+	}
+}
+
+// Overview Section
+.overview {
+	border-bottom: 1px solid var(--clr-neutral-300);
+	display: flex;
+	align-items: center;
+	&__heading {
+		font-size: 1.25rem;
+		font-weight: var(--fw-light);
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 1rem 2rem;
+	}
+	&__stars {
+		margin-right: auto;
+		display: flex;
+	}
+	&__icon-star,
+	&__icon-location {
+		font-size: 1rem;
+		color: var(--clr-primary-500);
+	}
+
+	&__location {
+		font-size: 0.875rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&__icon-location {
+		margin-right: 0.5rem;
+	}
+
+	&__rating {
+		background-color: var(--clr-primary-500);
+		color: var(--clr-neutral-100);
+		align-self: stretch;
+		padding: 0 1.325rem;
+		margin-left: 1rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		&-average {
+			font-size: 1.5rem;
+			font-weight: var(--fw-light);
+		}
+		&-count {
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// Inline button component
+.btn-inline {
+	border: none;
+	color: var(--clr-primary-500);
+	font-size: inherit;
+	background-color: transparent;
+	border-bottom: 1px solid currentColor;
+	padding: 2px;
+	cursor: pointer;
+	display: inline-block;
+
+	&:hover {
+		color: var(--clr-neutral-600);
+		animation: pulsate 0.5s infinite;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+@keyframes pulsate {
+	0% {
+		transform: scale(1);
+		box-shadow: none;
+	}
+	50% {
+		transform: scale(1.05);
+		box-shadow: 0 0.6rem 0.5rem var(--clr-neutral-900);
+	}
+	100% {
+		transform: scale(1);
+		box-shadow: none;
 	}
 }
