@@ -10,6 +10,12 @@
 	align-items: center;
 	justify-content: center;
 
+	@media only screen and (max-width: $bp-mobile) {
+		order: 1;
+		flex: 0 0 100%;
+		background-color: var(--clr-neutral-300);
+	}
+
 	&__input {
 		font-family: inherit;
 		font-size: inherit;
@@ -109,11 +115,23 @@
 	list-style: none;
 	margin-top: 2.25rem;
 
+	@media only screen and (max-width: $bp-medium) {
+		display: flex;
+		margin: 0;
+	}
+
 	&__item {
 		position: relative;
 
 		&:not(:last-child) {
 			margin-bottom: 1rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			flex: 1;
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
 		}
 	}
 
@@ -151,12 +169,28 @@
 		z-index: 10;
 		display: flex;
 		align-items: center;
+
+		@media only screen and (max-width: $bp-medium) {
+			justify-content: center;
+			padding: 1.25rem;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			flex-direction: column;
+			padding: 0.75rem;
+		}
 	}
 
 	&__icon {
 		font-size: 1.125rem;
 		color: currentColor;
 		margin-right: 1rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			margin-right: 0;
+			margin-bottom: 0.5rem;
+			font-size: 0.75rem;
+		}
 	}
 }
 
@@ -166,6 +200,10 @@
 	color: var(--clr-neutral-500);
 	text-align: center;
 	padding: 1rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		display: none;
+	}
 }
 
 // Image gallery
@@ -190,6 +228,11 @@
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		padding: 1rem 2rem;
+
+		@media only screen and (max-width: $bp-medium) {
+			font-size: 1rem;
+			padding: 0.75rem 1.5rem;
+		}
 	}
 	&__stars {
 		margin-right: auto;
@@ -222,6 +265,10 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+
+		@media only screen and (max-width: $bp-medium) {
+			padding: 0rem 1rem;
+		}
 
 		&-average {
 			font-size: 1.5rem;

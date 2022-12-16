@@ -38,6 +38,10 @@
 html,
 body {
   height: 100%; }
+  @media only screen and (max-width: 68.75em) {
+    html,
+    body {
+      font-size: 70%; } }
 
 /*
     Typographic tweaks!
@@ -102,6 +106,11 @@ body {
   margin: 5rem auto;
   background-color: var(--clr-neutral-300);
   box-shadow: var(--bs-dark); }
+  @media only screen and (max-width: 75em) {
+    .container {
+      max-width: 100%;
+      width: 100%;
+      margin: 0; } }
 
 .header {
   height: 4.375rem;
@@ -110,9 +119,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 24em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 7rem; } }
 
 .content {
   display: flex; }
+  @media only screen and (max-width: 46.875em) {
+    .content {
+      flex-direction: column; } }
 
 .sidebar {
   background-color: var(--clr-neutral-800);
@@ -131,6 +148,12 @@ body {
   padding: 3rem;
   background-color: var(--clr-neutral-400);
   border-bottom: 1px solid var(--clr-neutral-300); }
+  @media only screen and (max-width: 46.875em) {
+    .detail {
+      padding: 1.5rem; } }
+  @media only screen and (max-width: 33.75em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: var(--clr-neutral-100);
@@ -138,6 +161,14 @@ body {
   flex: 0 0 60%;
   margin-right: 3rem;
   padding: 2rem; }
+  @media only screen and (max-width: 46.875em) {
+    .description {
+      padding: 1.25rem;
+      margin-right: 1.5rem; } }
+  @media only screen and (max-width: 33.75em) {
+    .description {
+      margin-right: 0rem;
+      margin-bottom: 3rem; } }
 
 .guest-reviews {
   flex: 1; }
@@ -152,6 +183,10 @@ body {
   justify-content: space-between;
   position: relative;
   overflow: hidden; }
+  @media only screen and (max-width: 46.875em) {
+    .review {
+      padding: 1.25rem;
+      margin-bottom: 1.5rem; } }
   .review__text {
     margin-bottom: 1rem;
     z-index: 10;
@@ -190,6 +225,9 @@ body {
 .cta {
   padding: 2.25rem 0;
   text-align: center; }
+  @media only screen and (max-width: 46.875em) {
+    .cta {
+      padding: 1rem 0; } }
   .cta__book-now {
     font-size: 1.25rem;
     font-weight: var(--fw-light);
@@ -224,6 +262,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 24em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--clr-neutral-300); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -294,10 +337,19 @@ body {
   font-size: 1rem;
   list-style: none;
   margin-top: 2.25rem; }
+  @media only screen and (max-width: 46.875em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: 1rem; }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__item {
+        flex: 1; }
+        .side-nav__item:not(:last-child) {
+          margin-bottom: 0; } }
   .side-nav__item::before {
     content: "";
     position: absolute;
@@ -323,16 +375,32 @@ body {
     z-index: 10;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        justify-content: center;
+        padding: 1.25rem; } }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 0.75rem; } }
   .side-nav__icon {
     font-size: 1.125rem;
     color: currentColor;
     margin-right: 1rem; }
+    @media only screen and (max-width: 46.875em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        font-size: 0.75rem; } }
 
 .legal {
   font-size: 0.75rem;
   color: var(--clr-neutral-500);
   text-align: center;
   padding: 1rem; }
+  @media only screen and (max-width: 46.875em) {
+    .legal {
+      display: none; } }
 
 .gallery {
   display: flex; }
@@ -350,6 +418,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 1rem 2rem; }
+    @media only screen and (max-width: 46.875em) {
+      .overview__heading {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -372,6 +444,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 46.875em) {
+      .overview__rating {
+        padding: 0rem 1rem; } }
     .overview__rating-average {
       font-size: 1.5rem;
       font-weight: var(--fw-light); }

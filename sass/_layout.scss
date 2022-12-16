@@ -3,6 +3,12 @@
 	margin: 5rem auto;
 	background-color: var(--clr-neutral-300);
 	box-shadow: var(--bs-dark);
+
+	@media only screen and (max-width: $bp-largest) {
+		max-width: 100%;
+		width: 100%;
+		margin: 0;
+	}
 }
 
 .header {
@@ -12,11 +18,21 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	@media only screen and (max-width: $bp-mobile) {
+		flex-wrap: wrap;
+		align-content: space-around;
+		height: 7rem;
+	}
 }
 
 // parent element of both sidebar and hotel-veiw
 .content {
 	display: flex;
+
+	@media only screen and (max-width: $bp-medium) {
+		flex-direction: column;
+	}
 }
 
 .sidebar {
@@ -40,6 +56,14 @@
 	padding: 3rem;
 	background-color: var(--clr-neutral-400);
 	border-bottom: 1px solid var(--clr-neutral-300);
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 1.5rem;
+	}
+
+	@media only screen and (max-width: $bp-tablet) {
+		flex-direction: column;
+	}
 }
 
 .description {
@@ -48,6 +72,16 @@
 	flex: 0 0 60%;
 	margin-right: 3rem;
 	padding: 2rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 1.25rem;
+		margin-right: 1.5rem;
+	}
+
+	@media only screen and (max-width: $bp-tablet) {
+		margin-right: 0rem;
+		margin-bottom: 3rem;
+	}
 }
 
 // Guest reviews
@@ -65,6 +99,11 @@
 	justify-content: space-between;
 	position: relative;
 	overflow: hidden;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
 
 	&__text {
 		margin-bottom: 1rem;
@@ -114,6 +153,10 @@
 .cta {
 	padding: 2.25rem 0;
 	text-align: center;
+
+	@media only screen and (max-width: $bp-medium) {
+		padding: 1rem 0;
+	}
 
 	&__book-now {
 		font-size: 1.25rem;
