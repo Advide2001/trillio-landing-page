@@ -269,3 +269,62 @@
 		box-shadow: none;
 	}
 }
+
+// Paragraphs
+.paragraph:not(:last-of-type) {
+	margin-bottom: 1.5rem;
+}
+
+//Ammenities list
+.list {
+	list-style: none;
+	margin: 2rem 0;
+	padding: 2rem;
+	border-top: 1px solid var(--clr-neutral-400);
+	border-bottom: 1px solid var(--clr-neutral-400);
+
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item {
+		flex: 0 0 50%;
+		margin-bottom: 0.5rem;
+	}
+
+	&__item::before {
+		content: "✔";
+		margin-right: 0.5rem;
+		color: var(--clr-primary-500);
+	}
+}
+
+// Recommnedations
+
+.recommend {
+	font-size: 0.75rem;
+	color: var(--clr-neutral-700);
+	display: flex;
+	align-items: center;
+
+	&__count {
+		font-weight: var(--fw-bold);
+		margin-right: auto;
+	}
+
+	&__friends {
+		display: flex;
+		align-items: center;
+	}
+
+	&__photo {
+		box-sizing: content-box; // Only because the images are shrinking
+		width: 2.5rem;
+		height: 2.5rem;
+		border-radius: 50%;
+		border: 3px solid var(--clr-neutral-100);
+		display: flex;
+		&:not(:last-child) {
+			margin-right: -1rem;
+		}
+	}
+}
