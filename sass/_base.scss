@@ -21,6 +21,13 @@
 	--bs-dark: 0 1.25rem 3.75rem rgba(var(--clr-neutral-900), 0.3);
 }
 
+// Variables for breakpoints
+$bp-largest: 75em;
+$bp-large: 68.75em;
+$bp-medium: 46.875em;
+$bp-tablet: 33.75em;
+$bp-mobile: 24em;
+
 // CSS Reset
 /*
     1. Use a more-intuitive box-sizing model.
@@ -45,6 +52,10 @@
 html,
 body {
 	height: 100%;
+
+	@media only screen and (max-width: $bp-large) {
+		font-size: 70%;
+	}
 }
 
 /*
