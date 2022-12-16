@@ -83,8 +83,6 @@
 		border-radius: 50%;
 		margin-right: 1rem;
 	}
-	&__user-box {
-	}
 	&__user-name {
 		font-size: 0.8rem;
 		text-transform: uppercase;
@@ -109,5 +107,51 @@
 		font-family: sans-serif;
 		line-height: 1;
 		z-index: 1;
+	}
+}
+
+// CTA button
+.cta {
+	padding: 2.25rem 0;
+	text-align: center;
+
+	&__book-now {
+		font-size: 1.25rem;
+		font-weight: var(--fw-light);
+		text-transform: uppercase;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.btn {
+	font-size: 1.25rem;
+	font-weight: var(--fw-light);
+	text-transform: uppercase;
+	border-radius: 100px;
+	border: none;
+	background-image: linear-gradient(
+		to right,
+		var(--clr-primary-100),
+		var(--clr-primary-900)
+	);
+	color: var(--clr-neutral-100);
+	padding: 1rem 2rem;
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:hover {
+		background-image: linear-gradient(
+			to right,
+			var(--clr-primary-900),
+			var(--clr-primary-100)
+		);
+		transform: translateY(-3px);
+	}
+
+	&:active {
+		transform: translateY(1px);
+	}
+	&:focus {
+		outline: none;
 	}
 }
